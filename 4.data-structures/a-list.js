@@ -15,3 +15,13 @@ const arrayToList = (arr) => {
 };
 
 console.log(arrayToList([10, 20]));
+
+const listToArray = (list) => {
+    let arr = [];
+    for (let node = list; node; node = node.rest) {
+        arr.push(node.value);
+    }
+    return arr;
+}
+
+console.log(listToArray(arrayToList([10, 20, 30])));
