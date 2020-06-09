@@ -25,3 +25,12 @@ const listToArray = (list) => {
 }
 
 console.log(listToArray(arrayToList([10, 20, 30])));
+
+const prepend = (num, list) => {
+    return {
+        value: num,
+        rest: list
+    };
+};
+
+console.log(prepend(10, prepend(20, null)));
