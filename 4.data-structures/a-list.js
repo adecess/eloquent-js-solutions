@@ -34,3 +34,9 @@ const prepend = (num, list) => {
 };
 
 console.log(prepend(10, prepend(20, null)));
+
+const nth = (list, num) => {
+    return listToArray(list)[num];
+};
+
+console.log(nth(arrayToList([10, 20, 30]), 1));
