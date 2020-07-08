@@ -3,12 +3,20 @@ class Group {
         this.members = []
     }
 
+    has (member) {
+        return this.members.includes(member)
+    }
+
     add (member) {
         if (this.members.includes(member)) {
             console.log(`${member} already part of the group`)
         } else {
             this.members.push(member)
         }
+    }
+
+    delete (member) {
+
     }
 }
 
