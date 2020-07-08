@@ -3,11 +3,11 @@ class Group {
         this.members = []
     }
 
-    has (member) {
+    has(member) {
         return this.members.includes(member)
     }
 
-    add (member) {
+    add(member) {
         if (this.members.includes(member)) {
             console.log(`${member} already part of the group`)
         } else {
@@ -15,8 +15,20 @@ class Group {
         }
     }
 
-    delete (member) {
+    delete(member) {
         this.members = this.members.filter((m) => m !== member)
+    }
+
+    static from(iterable) {
+        let group = new Group()
+        for (const element of iterable) {
+            if (group.members.includes(element)) {
+                console.log(`${element} already part of the group`)
+            } else {
+                group.members.push(element)
+            }
+        }
+        return group
     }
 }
 
