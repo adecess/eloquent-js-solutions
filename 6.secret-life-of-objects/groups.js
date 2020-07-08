@@ -16,7 +16,7 @@ class Group {
     }
 
     delete (member) {
-
+        this.members = this.members.filter((m) => m !== member)
     }
 }
 
