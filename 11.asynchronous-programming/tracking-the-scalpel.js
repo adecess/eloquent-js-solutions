@@ -1,4 +1,3 @@
-// Got crow-tech on Marijn Haverbeke's Github repo
 const crowTech = require("./crow-tech")
 const {bigOak} = crowTech
 
@@ -12,7 +11,7 @@ async function locateScalpel(nest) {
         if(next === current) {
             return current
         }
-        current = next;
+        current = next
     }
 }
 
@@ -27,5 +26,5 @@ function locateScalpel2(nest) {
     return loop(current)
 }
 
-locateScalpel(bigOak).then(console.log);
-locateScalpel2(bigOak).then(console.log);
+locateScalpel(bigOak).then(console.log)
+locateScalpel2(bigOak).then(console.log)
